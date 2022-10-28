@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cohort %>
+<% @cohort.recruitment_phases.each do |r| %>
+  <%= render r %>
+<% end %>
+
+<div>
+  <%= link_to "Edit this cohort", edit_cohort_path(@cohort) %> |
+  <%= link_to "Back to cohorts", cohorts_path %>
+
+  <%= button_to "Destroy this cohort", @cohort, method: :delete %>
+</div>

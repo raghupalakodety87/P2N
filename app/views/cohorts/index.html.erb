@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cohorts</h1>
+
+<div id="cohorts">
+  <% @cohorts.each do |cohort| %>
+    <%= render cohort %>
+    <p>
+      <%= link_to "Show this cohort", cohort %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New cohort", new_cohort_path %>
+
+<script type="text/javascript">
+
+</script>
+
+<div id="jstree">
+</div>
+

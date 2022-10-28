@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @recruitment_phase %>
+
+<div>
+  <%= link_to "Edit this recruitment phase", edit_recruitment_phase_path(@recruitment_phase) %> |
+  <%= link_to "Back to recruitment phases", recruitment_phases_path %>
+
+  <%= button_to "Destroy this recruitment phase", @recruitment_phase, method: :delete %>
+</div>

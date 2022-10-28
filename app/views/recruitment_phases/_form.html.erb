@@ -1,0 +1,22 @@
+<%= form_with(model: recruitment_phase) do |form| %>
+  <% if recruitment_phase.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recruitment_phase.errors.count, "error") %> prohibited this recruitment_phase from being saved:</h2>
+
+      <ul>
+        <% recruitment_phase.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :phase_name, style: "display: block" %>
+    <%= form.text_field :phase_name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
